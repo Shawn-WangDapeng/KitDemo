@@ -45,8 +45,20 @@
     ticket1.ticketType = @"(单程)";
     ticket1.ticketStatus = YES;
     ticket1.price = @"￥487";
+    TicketInfo *ticket2 = [[TicketInfo alloc]init];
+    ticket2.address = @"上海 - 北京";
+    ticket2.upTime = @"起飞时间：2015-06-07 19：50";
+    ticket2.downAirport = @"起降机场：虹桥机场 - 首都国际机场";
+    ticket2.flightName = @"航班：  春秋航空9C8965";
+    ticket2.ticketType = @"(单程)";
+    ticket2.ticketStatus = NO;
+    ticket2.price = @"￥487";
     for (NSUInteger i = 0; i < 10; i ++) {
-        [_ticketInfoArr addObject:ticket1];
+        if (i % 2 == 0) {
+            [_ticketInfoArr addObject:ticket2];
+        } else {
+            [_ticketInfoArr addObject:ticket1];
+        }
     }
 
 }
@@ -56,7 +68,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.ticketInfoArr count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
