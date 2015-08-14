@@ -16,4 +16,6 @@
 @property (nonatomic, strong) NSString *ticketType;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, assign) BOOL ticketStatus;
+
+- (id)initWithAddredd:(NSString *)address upTime:(NSString *)upTime flightName:(NSString *)flightName price:(NSString *)price ticketStatus:(BOOL)ticketStatus downAirport:(NSString *)downAirport ticketType:(NSString *)ticketType;
 @end

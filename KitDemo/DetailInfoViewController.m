@@ -39,20 +39,21 @@
     _ticketInfoArr = [[NSMutableArray alloc] initWithCapacity:10];
     TicketInfo *ticket1 = [[TicketInfo alloc]init];
     ticket1.address = @"上海 - 北京";
-    ticket1.upTime = @"起飞时间：2015-06-07 19：50";
+    ticket1.upTime = @"起飞时间: 2015-06-07 19:50";
     ticket1.downAirport = @"起降机场：虹桥机场 - 首都国际机场";
-    ticket1.flightName = @"航班：  春秋航空9C8965";
+    ticket1.flightName = @"航班:  春秋航空9C8965";
     ticket1.ticketType = @"(单程)";
     ticket1.ticketStatus = YES;
     ticket1.price = @"￥487";
-    TicketInfo *ticket2 = [[TicketInfo alloc]init];
-    ticket2.address = @"上海 - 北京";
-    ticket2.upTime = @"起飞时间：2015-06-07 19：50";
-    ticket2.downAirport = @"起降机场：虹桥机场 - 首都国际机场";
-    ticket2.flightName = @"航班：  春秋航空9C8965";
-    ticket2.ticketType = @"(单程)";
-    ticket2.ticketStatus = NO;
-    ticket2.price = @"￥487";
+//    TicketInfo *ticket2 = [[TicketInfo alloc]init];
+//    ticket2.address = @"上海 - 北京";
+//    ticket2.upTime = @"起飞时间: 2015-06-07 19:50";
+//    ticket2.downAirport = @"起降机场：虹桥机场 - 首都国际机场";
+//    ticket2.flightName = @"航班:  春秋航空9C8965";
+//    ticket2.ticketType = @"(单程)";
+//    ticket2.ticketStatus = NO;
+//    ticket2.price = @"￥487";
+    TicketInfo *ticket2 = [[TicketInfo alloc] initWithAddredd:@"上海 - 北京" upTime:@"起飞时间: 2015-06-07 19:50" flightName:@"航班:  春秋航空9C8965" price:@"￥487" ticketStatus:NO downAirport:@"起降机场：虹桥机场 - 首都国际机场" ticketType:@"(单程)"];
     for (NSUInteger i = 0; i < 10; i ++) {
         if (i % 2 == 0) {
             [_ticketInfoArr addObject:ticket2];

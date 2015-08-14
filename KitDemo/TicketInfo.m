@@ -10,6 +10,21 @@
 
 @implementation TicketInfo
 @synthesize address = _address, upTime = _upTime, flightName = _flightName, price = _price, ticketType = _ticketType, downAirport = _downAirport, ticketStatus = _ticketStatus;
+
+- (id)initWithAddredd:(NSString *)address upTime:(NSString *)upTime flightName:(NSString *)flightName price:(NSString *)price ticketStatus:(BOOL)ticketStatus downAirport:(NSString *)downAirport ticketType:(NSString *)ticketType {
+    self = [super init];
+    if (self) {
+        self.address = address;
+        self.upTime = upTime;
+        self.flightName = flightName;
+        self.price = price;
+        self.ticketStatus = ticketStatus;
+        self.ticketType = ticketType;
+        self.downAirport = downAirport;
+    }
+    return self;
+}
+
 - (void)setAddress:(NSString *)address {
     _address = address;
 }
