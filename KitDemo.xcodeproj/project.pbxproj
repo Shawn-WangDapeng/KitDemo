@@ -15,6 +15,13 @@
 		299D747F1B7CA6960055232C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299D747E1B7CA6960055232C /* Images.xcassets */; };
 		299D74821B7CA6960055232C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299D74801B7CA6960055232C /* LaunchScreen.xib */; };
 		299D748E1B7CA6960055232C /* KitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D748D1B7CA6960055232C /* KitDemoTests.m */; };
+		299D74991B7CA6AC0055232C /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D74981B7CA6AC0055232C /* DetailInfoViewController.m */; };
+		299D749B1B7CA7800055232C /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 299D749A1B7CA7800055232C /* title.png */; };
+		299D74A01B7CAB5A0055232C /* DetailInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D749F1B7CAB5A0055232C /* DetailInfoCellTableViewCell.m */; };
+		299D74A31B7CAE350055232C /* UIColor+Utile.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D74A21B7CAE350055232C /* UIColor+Utile.m */; };
+		299D74A61B7CE1420055232C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D74A51B7CE1420055232C /* UIView+Layout.m */; };
+		299D74AB1B7CEB1E0055232C /* TicketInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D74AA1B7CEB1E0055232C /* TicketInfo.m */; };
+		299D74AD1B7CF5380055232C /* fullTitle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 299D74AC1B7CF5380055232C /* fullTitle2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,18 @@
 		299D74871B7CA6960055232C /* KitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299D748C1B7CA6960055232C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		299D748D1B7CA6960055232C /* KitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KitDemoTests.m; sourceTree = "<group>"; };
+		299D74971B7CA6AC0055232C /* DetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoViewController.h; sourceTree = "<group>"; };
+		299D74981B7CA6AC0055232C /* DetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoViewController.m; sourceTree = "<group>"; };
+		299D749A1B7CA7800055232C /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		299D749E1B7CAB5A0055232C /* DetailInfoCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoCellTableViewCell.h; sourceTree = "<group>"; };
+		299D749F1B7CAB5A0055232C /* DetailInfoCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoCellTableViewCell.m; sourceTree = "<group>"; };
+		299D74A11B7CAE350055232C /* UIColor+Utile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utile.h"; sourceTree = "<group>"; };
+		299D74A21B7CAE350055232C /* UIColor+Utile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utile.m"; sourceTree = "<group>"; };
+		299D74A41B7CE1420055232C /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		299D74A51B7CE1420055232C /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		299D74A91B7CEB1E0055232C /* TicketInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketInfo.h; sourceTree = "<group>"; };
+		299D74AA1B7CEB1E0055232C /* TicketInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketInfo.m; sourceTree = "<group>"; };
+		299D74AC1B7CF5380055232C /* fullTitle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullTitle2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +106,23 @@
 				299D74731B7CA6960055232C /* AppDelegate.m */,
 				299D74781B7CA6960055232C /* ViewController.h */,
 				299D74791B7CA6960055232C /* ViewController.m */,
+				299D749A1B7CA7800055232C /* title.png */,
 				299D747B1B7CA6960055232C /* Main.storyboard */,
 				299D747E1B7CA6960055232C /* Images.xcassets */,
 				299D74801B7CA6960055232C /* LaunchScreen.xib */,
 				299D74751B7CA6960055232C /* KitDemo.xcdatamodeld */,
+				299D74AC1B7CF5380055232C /* fullTitle2.png */,
 				299D746E1B7CA6960055232C /* Supporting Files */,
+				299D74971B7CA6AC0055232C /* DetailInfoViewController.h */,
+				299D74981B7CA6AC0055232C /* DetailInfoViewController.m */,
+				299D749E1B7CAB5A0055232C /* DetailInfoCellTableViewCell.h */,
+				299D749F1B7CAB5A0055232C /* DetailInfoCellTableViewCell.m */,
+				299D74A11B7CAE350055232C /* UIColor+Utile.h */,
+				299D74A21B7CAE350055232C /* UIColor+Utile.m */,
+				299D74A41B7CE1420055232C /* UIView+Layout.h */,
+				299D74A51B7CE1420055232C /* UIView+Layout.m */,
+				299D74A91B7CEB1E0055232C /* TicketInfo.h */,
+				299D74AA1B7CEB1E0055232C /* TicketInfo.m */,
 			);
 			path = KitDemo;
 			sourceTree = "<group>";
@@ -204,7 +235,9 @@
 			files = (
 				299D747D1B7CA6960055232C /* Main.storyboard in Resources */,
 				299D74821B7CA6960055232C /* LaunchScreen.xib in Resources */,
+				299D749B1B7CA7800055232C /* title.png in Resources */,
 				299D747F1B7CA6960055232C /* Images.xcassets in Resources */,
+				299D74AD1B7CF5380055232C /* fullTitle2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299D74A31B7CAE350055232C /* UIColor+Utile.m in Sources */,
 				299D74741B7CA6960055232C /* AppDelegate.m in Sources */,
 				299D74711B7CA6960055232C /* main.m in Sources */,
+				299D74A01B7CAB5A0055232C /* DetailInfoCellTableViewCell.m in Sources */,
+				299D74A61B7CE1420055232C /* UIView+Layout.m in Sources */,
 				299D747A1B7CA6960055232C /* ViewController.m in Sources */,
 				299D74771B7CA6960055232C /* KitDemo.xcdatamodeld in Sources */,
+				299D74AB1B7CEB1E0055232C /* TicketInfo.m in Sources */,
+				299D74991B7CA6AC0055232C /* DetailInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
