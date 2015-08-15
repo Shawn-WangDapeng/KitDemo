@@ -45,25 +45,14 @@
     [self.view addSubview:self.detailTableView];
     
     UIImageView *titleImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fullTitle2"]];
-    titleImgView.frame = CGRectMake(-2, 0, [[UIScreen mainScreen] bounds].size.width + 4, 120);
+    titleImgView.frame = CGRectMake(-2, 0, [[UIScreen mainScreen] bounds].size.width + 4, 110);
     [self.view addSubview:titleImgView];
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self initTickeInfo];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-//    self.view.backgroundColor = [UIColor whiteColor];
-//    UIImageView *titleImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fullTitle2"]];
-//    titleImgView.frame = CGRectMake(-2, 0, [[UIScreen mainScreen] bounds].size.width + 4, 120);
-//    [self.view addSubview:titleImgView];
-//    
-//    _detailTableView = [[UITableView alloc] init];
-//    _detailTableView.frame = CGRectMake(0, 120, SCREEN_WIDTH, SCREEN_HEIGHT);
-//    _detailTableView.delegate = self;
-//    _detailTableView.dataSource = self;
-//    [self.view addSubview:_detailTableView];
 }
 
 - (void)initTickeInfo {
@@ -76,8 +65,6 @@
     ticket1.ticketType = @"(单程)";
     ticket1.ticketStatus = YES;
     ticket1.price = @"￥487";
-    
-    TicketInfo *ticket2 = [[TicketInfo alloc] initWithAddredd:@"上海 - 北京" upTime:@"起飞时间:  2015-06-07 19:50" flightName:@"航班:        春秋航空9C8965" price:@"￥537" ticketStatus:NO downAirport:@"起降机场:  虹桥机场 - 首都国际机场" ticketType:@"(单程)"];
     
     TicketInfo *ticketGo = [[TicketInfo alloc] initWithAddredd:@"上海 - 北京" upTime:@"起飞时间:  2015-08-22 09:30" flightName:@"航班:         东航MU5153" price:@"￥489" ticketStatus:YES downAirport:@"起降机场:  虹桥机场 - 首都机场" ticketType:@"(单程)"];
     
@@ -95,14 +82,6 @@
     [_ticketInfoArr addObject:ticketGo];
     [_ticketInfoArr addObject:ticketBackHarbin];
     [_ticketInfoArr addObject:ticketToHarbin];
-    
-//    for (NSUInteger i = 0; i < 10; i ++) {
-//        if (i % 2 == 0) {
-//            [_ticketInfoArr addObject:ticket2];
-//        } else {
-//            [_ticketInfoArr addObject:ticket1];
-//        }
-//    }
 
 }
 
@@ -133,14 +112,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end
