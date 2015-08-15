@@ -24,20 +24,20 @@
         _upTimeLabel = [[UILabel alloc] init];
         _upTimeLabel.textColor = [UIColor colorWithIntRed:146 green:146 blue:146];
         _upTimeLabel.backgroundColor = [UIColor clearColor];
-        _upTimeLabel.font = [UIFont systemFontOfSize:14.0f];
+        _upTimeLabel.font = [UIFont systemFontOfSize:16.0f];
         [self.contentView addSubview:_upTimeLabel];
         
         _downAirportLabel = [[UILabel alloc] init];
         _downAirportLabel.textColor = [UIColor colorWithIntRed:146 green:146 blue:146];
         _downAirportLabel.backgroundColor = [UIColor clearColor];
-        _downAirportLabel.font = [UIFont systemFontOfSize:14.0f];
+        _downAirportLabel.font = [UIFont systemFontOfSize:16.0f];
         [self.contentView addSubview:_downAirportLabel];
         
         _flightNameLabel = [UILabel new];
         _flightNameLabel = [[UILabel alloc] init];
         _flightNameLabel.textColor = [UIColor colorWithIntRed:146 green:146 blue:146];
         _flightNameLabel.backgroundColor = [UIColor clearColor];
-        _flightNameLabel.font = [UIFont systemFontOfSize:14.0f];
+        _flightNameLabel.font = [UIFont systemFontOfSize:16.0f];
         [self.contentView addSubview:_flightNameLabel];
         
         _typeLabel = [[UILabel alloc] init];
@@ -49,15 +49,16 @@
         _priceLabel = [[UILabel alloc] init];
         _priceLabel.textColor = [UIColor colorWithIntRed:255 green:69 blue:0];
         _priceLabel.backgroundColor = [UIColor clearColor];
-        _priceLabel.font = [UIFont systemFontOfSize:14.0f];
+        _priceLabel.font = [UIFont systemFontOfSize:16.0f];
         [self.contentView addSubview:_priceLabel];
         
         _ticketStatusLabel = [[UILabel alloc] init];
         _ticketStatusLabel.textColor = [UIColor whiteColor];
-        _ticketStatusLabel.backgroundColor = [UIColor colorWithIntRed:27 green:169 blue:186];
-        _ticketStatusLabel.font = [UIFont systemFontOfSize:14.0f];
+        _ticketStatusLabel.backgroundColor = [UIColor colorWithIntRed:199 green:206 blue:212];
+        _ticketStatusLabel.font = [UIFont systemFontOfSize:16.0f];
         _ticketStatusLabel.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_ticketStatusLabel];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return self;
@@ -119,10 +120,33 @@
     self.upTimeLabel.text = ticketInfo.upTime;
     self.downAirportLabel.text = ticketInfo.downAirport;
     self.flightNameLabel.text = ticketInfo.flightName;
-    self.ticketStatusLabel.backgroundColor = ticketInfo.ticketStatus ? [UIColor colorWithIntRed:27 green:169 blue:186] : [UIColor colorWithIntRed:146 green:146 blue:146];
+    self.ticketStatusLabel.backgroundColor = ticketInfo.ticketStatus ? [UIColor colorWithIntRed:27 green:169 blue:186] : [UIColor colorWithIntRed:199 green:206 blue:212];
     self.ticketStatusLabel.text = ticketInfo.ticketStatus ? @"出票完成" : @"已退款";
     self.priceLabel.text = ticketInfo.price;
     self.typeLabel.text = ticketInfo.ticketType;
+    if (!ticketInfo.ticketStatus) {
+        self.lineView = [[UIView alloc] init];
+        self.lineView.frame = CGRectMake(15, 110, self.contentView.width, .5f);
+        self.lineView.backgroundColor = [UIColor colorWithIntRed:199 green:206 blue:212];
+        [self.contentView addSubview:self.lineView];
+        
+        self.refundDetailBtn = [[UIButton alloc] init];
+//        self.refundDetailBtn.frame = CGRectMake(self.contentView.width - 64 - 8, 120, 72, 45);
+        self.refundDetailBtn.top = 120;
+        self.refundDetailBtn.width = 80;
+        self.refundDetailBtn.height = 50;
+        self.refundDetailBtn.right = SCREEN_WIDTH - 8;
+        
+        [self.refundDetailBtn.layer setBorderColor:[[UIColor colorWithIntRed:27 green:169 blue:186] CGColor]];
+        [self.refundDetailBtn.layer setBorderWidth:1.0f];
+        [self.refundDetailBtn.layer setCornerRadius:5.0f];
+        [self.refundDetailBtn setTitle:@"退款详情" forState:UIControlStateNormal];
+        [self.refundDetailBtn setTitleColor:[UIColor colorWithIntRed:27 green:169 blue:186] forState:UIControlStateNormal];
+        
+        [self.contentView addSubview:self.refundDetailBtn];
+        
+        
+    }
 }
 
 @end
